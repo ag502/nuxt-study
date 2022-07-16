@@ -5,8 +5,15 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'MainPage',
+
+  async created() {
+    const response = await axios.get('http://localhost:8000/products')
+    console.log(response)
+  },
 }
 </script>
 

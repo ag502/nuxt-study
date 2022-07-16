@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "json-server --watch db.json",
+    "dev": "export SET NODE_OPTIONS=--openssl-legacy-provider && json-server --port 8000 --watch db.json",
     "generate": "json-server generate.js"
   },
   "keywords": [],

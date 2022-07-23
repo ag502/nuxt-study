@@ -22,6 +22,9 @@
           <span>{{ product.price }}</span>
         </li>
       </ul>
+      <div class="cart-wrapper">
+        <button class="btn" @click="routeToCartPage">장바구니 바로가기</button>
+      </div>
     </main>
   </div>
 </template>
@@ -32,7 +35,7 @@ import SearchInput from '@/components/SearchInput.vue'
 import { fetchProductsByKeyword } from '@/api'
 
 export default {
-  name: 'IndexPage',
+  name: 'MainPage',
 
   components: { SearchInput },
 
@@ -64,6 +67,9 @@ export default {
         ...item,
         imageUrl: `${item.imageUrl}?random=${Math.random()}`,
       }))
+    },
+    routeToCartPage() {
+      this.$router.push('/cart')
     },
   },
 }

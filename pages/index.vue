@@ -4,6 +4,7 @@
       <SearchInput
         :search-keyword="searchKeyword"
         @input="updateSearchKeyword"
+        @search="searchProducts"
       />
       <ul>
         <li
@@ -28,6 +29,7 @@
 <script>
 import axios from 'axios'
 import SearchInput from '@/components/SearchInput.vue'
+import { fetchProductsByKeyword } from '@/api'
 
 export default {
   name: 'IndexPage',
@@ -55,6 +57,13 @@ export default {
     },
     updateSearchKeyword(keywword) {
       this.searchKeyword = keywword
+    },
+    async searchProducts() {
+      const { data } = await fetchProductsByKeyword(this.searchKeyword)
+      this.products = data.map((item) => ({
+        ...item,
+        imageUrl: `${item.imageUrl}?random=${Math.random()}`,
+      }))
     },
   },
 }

@@ -1,3 +1,5 @@
+import { fetchCartItems } from '~/api'
+
 export const state = () => ({
   cartItems: [],
 })
@@ -10,8 +12,20 @@ export const mutations = {
     }
     state.cartItems.push(newCartItem)
   },
+  setCartItems(state, cartItems) {
+    state.cartItems = cartItems
+  },
 }
 
-export const actiosn = {
-  addCartItem({ commit }) {},
+export const actions = {
+  async FETCH_CART_ITEMS(context) {
+    const { data } = await fetchCartItems()
+    context.commit(
+      'setCartItems',
+      data.map((item) => ({
+        ...item,
+        imageUrl: `${item.imageUrl}?random=${Math.random()}`,
+      }))
+    )
+  },
 }

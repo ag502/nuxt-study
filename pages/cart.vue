@@ -31,6 +31,10 @@
 <script>
 export default {
   name: 'CartPage',
+
+  async asyncData({ store }) {
+    await store.dispatch('FETCH_CART_ITEMS')
+  },
 }
 </script>
 

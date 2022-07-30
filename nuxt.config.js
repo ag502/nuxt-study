@@ -37,6 +37,6 @@ export default {
 
   // Server Setup
   server: {
-    port: 5000,
+    port: 3000,
   },
 }

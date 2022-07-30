@@ -37,6 +37,6 @@ export default {
 
   // Server Setup
   server: {
-    port: 3000,
+    port: process.env.NODE_ENV === 'development' ? 3000 : null,
   },
 }

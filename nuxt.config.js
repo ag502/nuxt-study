@@ -35,8 +35,16 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // Server Setup
+  // server Setup
   server: {
     port: process.env.NODE_ENV === 'development' ? 3000 : null,
+  },
+
+  // env config
+  env: {
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'https://my-json-server.typicode.com/ag502/nuxt-study-api'
+        : 'http://localhost:8000',
   },
 }

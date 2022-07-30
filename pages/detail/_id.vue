@@ -28,8 +28,7 @@ export default {
 
   methods: {
     async addToCart() {
-      const response = await createCartItem(this.product)
-      console.log(response)
+      await createCartItem(this.product)
       this.$store.commit('addCartItem', this.product)
       this.$router.push('/cart')
     },

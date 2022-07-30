@@ -184,14 +184,14 @@
   "carts": [
     {
       "id": 1,
-      "name": "Intelligent Metal Mouse",
-      "price": "84.00",
+      "name": "Refined Fresh Chicken",
+      "price": "209.00",
       "imageUrl": "http://placeimg.com/640/480/fashion"
     },
     {
-      "id": 5,
-      "name": "Small Rubber Salad",
-      "price": "455.00",
+      "id": 2,
+      "name": "Handcrafted Frozen Pizza",
+      "price": "315.00",
       "imageUrl": "http://placeimg.com/640/480/fashion"
     }
   ]

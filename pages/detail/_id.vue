@@ -42,14 +42,14 @@ export default {
         },
         {
           hid: 'og:description',
-          property: ' og:description',
+          property: 'og:description',
           content: '상품의 상세 정보를 확인해보세요',
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: "http://placeimg.com/640/480/fashion"
-        }
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'http://placeimg.com/640/480/fashion',
+        },
       ],
     }
   },
